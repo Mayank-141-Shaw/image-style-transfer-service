@@ -4,6 +4,7 @@
 
 1. [Introduction](#introduction)
 2. [Running](#running)
+3. [Endpoints](#endpoints)
 
 ## Introduction
 
@@ -22,34 +23,36 @@ For running it locally, one must have python pre-installed in their system
 Then follow the steps to effectively run this service
 
 1.  Must start a virtual environment, for that first do:
-    ###
+    
         pip install pipenv
-    ###
+    
 3.  Then create a virtual env:
-    ###
+    
         python -m venv env-name
-    ###
+    
 5.  After the env is created write a command to activate the environment
-    ###
+
+    For other than windows
+    
         env-name\Scripts\activate.bat
-    ### for other than windows
-    OR
-    ###
+
+    For windows
+    
         env-name\Scripts\Activate.ps1
-    ### for windows
+    
 7.  Install the requirements using
-    ###
+    
         pip install -r requirements.txt
-    ###
+    
 9.  After the setup, use the following to start the service
-    ###
+    
         python -m uvicorn main:app --reload
-    ###
+    
 Now the service should be running at localhost:8000
 
 ## Endpoints:
 
-1. (path="/",
+1. ( path="/",
    type="POST",
    parameters = {
    content_image : Any (image file), // the image you want to convert
