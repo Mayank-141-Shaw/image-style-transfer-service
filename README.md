@@ -30,22 +30,31 @@ Then follow the steps to effectively run this service
         python -m venv env-name
     ###
 5.  After the env is created write a command to activate the environment
-    ### env-name\Scripts\activate.bat ### for other than windows
-        OR
-    ### env-name\Scripts\Activate.ps1 ### for windows
-6.  Install the requirements using
-    ## pip install -r requirements.txt
-7.  After the setup, use the following to start the service
-    ## python -m uvicorn main:app --reload
-
+    ###
+        env-name\Scripts\activate.bat
+    ### for other than windows
+    OR
+    ###
+        env-name\Scripts\Activate.ps1
+    ### for windows
+7.  Install the requirements using
+    ###
+        pip install -r requirements.txt
+    ###
+9.  After the setup, use the following to start the service
+    ###
+        python -m uvicorn main:app --reload
+    ###
 Now the service should be running at localhost:8000
 
 ## Endpoints:
 
-1. ( path="/",
+1. (path="/",
    type="POST",
    parameters = {
    content_image : Any (image file), // the image you want to convert
    style_image : Any (image_file) // the image style you wouls like to use
    },
-   return={ image oject in jpg format } ) ==> Use this endpoint for accesing the service. It requires you to pass two image files as query parameters (one the sty) and returns the generated image.
+   return={ image oject in jpg format } )
+   ------------------------------------------------------------------------------------------------------
+   Use this endpoint for accesing the service. It requires you to pass two image files as query parameters (one the sty) and returns the generated image.
