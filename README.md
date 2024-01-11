@@ -22,16 +22,20 @@ For running it locally, one must have python pre-installed in their system
 Then follow the steps to effectively run this service
 
 1.  Must start a virtual environment, for that first do:
-    ## pip install pipenv
-2.  Then create a virtual env:
-    ## python -m venv env-name
-3.  After the env is created write a command to activate the environment
+    ###
+        pip install pipenv
+    ###
+3.  Then create a virtual env:
+    ###
+        python -m venv env-name
+    ###
+5.  After the env is created write a command to activate the environment
     ### env-name\Scripts\activate.bat ### for other than windows
         OR
     ### env-name\Scripts\Activate.ps1 ### for windows
-4.  Install the requirements using
+6.  Install the requirements using
     ## pip install -r requirements.txt
-5.  After the setup, use the following to start the service
+7.  After the setup, use the following to start the service
     ## python -m uvicorn main:app --reload
 
 Now the service should be running at localhost:8000
